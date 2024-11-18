@@ -1,41 +1,16 @@
-// З використанням властивостей і методів DOM-елементів,
-//  напиши скрипт, який:
+const categories = document.getElementById("categories");
+const result = () => {
+  return `number of categories: ${categories.children.length}`;
+};
+console.log(result());
 
-// Порахує й виведе в консоль кількість категорій в
-//  ul#categories, тобто елементів li.item.
-// Для кожного елемента li.item у списку ul#categories 
-// знайде й виведе в консоль текст заголовка елемента
-//  (тегу <h2>) і кількість елементів у категорії 
-//  (усіх <li>, вкладених у нього).
+const list = document.querySelectorAll(".item");
 
+const title = document.querySelectorAll("h2");
 
-// На що буде звертати увагу ментор при перевірці:
+list.forEach((item, index) => {
+  const listEl = item.querySelector("ul").children.length;
 
-// Кількість категорій, їх назва та кількість елементів 
-// отримані за допомогою властивостей і методів DOM-елементів
-// Дані за кожною категорією були отримані й виведені 
-// в консоль у тілі циклу або методу forEach()
-// У консолі має бути виведено наступне повідомлення:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  console.log(`Category: ${title[index].textContent} `);
+  console.log(`element: ${listEl}`);
+});
