@@ -23,3 +23,23 @@ flex-direction: column;
 gap: 12px;
 
 }
+
+a{
+background-color: #f8e4e4;
+color: #212121;
+border: 2px solid #0c0c0434;
+border-radius: 15%;
+text-decoration: none;
+font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
