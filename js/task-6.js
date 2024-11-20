@@ -45,18 +45,53 @@ const btnCreate = document.querySelector('button[data-create]')
 const btnDestroy = document.querySelector('button[data-destroy]')
 const boxCon =document.getElementById('boxes')
 
-btnCreate.addEventListener('button', createBtn)
-btnDestroy.addEventListener('button', destroyBtn)
+btnCreate.addEventListener('click', createBtn)
+btnDestroy.addEventListener('click', destroyBtn)
 
 function createBtn (e) {
+const amount = parseInt(input.value)
+if(amount >= 1 && amount <= 100) {
+  createBoxes(amount)
+  // createBoxes
+} else {
+  alert('Введіть число від 1 до 100')
+}
 
 }
 
+function createBoxes(amount) {
+let boxEl = 30;
+let elem = [];
+for(let i = 0; i < amount; i++){
+  const box = document.createElement('div');
+  box.style.width = `${boxEl}px`;
+  box.style.height = `${boxEl}px`;
+ box.style.backgroundColor = getRandomHexColor();
+ box.style.margin = '5px'
+ elem.push(box);
+boxEl += 10;
+
+}
+boxCon.style.display = 'flex';
+boxCon.style.flexWrap = 'wrap';
+boxCon.style.gap = '10px';
+boxCon.append(...elem);
+input.value = '';
+
+}
 
 
 function destroyBtn(event) {
-
+  destroyBoxes();
 }
+
+function destroyBoxes(){
+input.value = '';
+boxCon.innerHTML = '';
+return;
+}
+
+
 
 
 function getRandomHexColor() {
