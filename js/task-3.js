@@ -11,30 +11,15 @@ function inpFoo(event) {
   title.textContent = input.value;
 }
 
-
-
 //
-input.style.width = '360px';
-input.style.height = '40px';
-input.style.color = '#2e2f42';
+input.style.width = "360px";
+input.style.height = "40px";
+input.style.color = "#2e2f42";
 
+const titleStyle = document.querySelector("h1");
 
-const titleStyle = document.querySelector('h1')
-
-
-
-
-titleStyle.style.fontWeight = '600';
-titleStyle.style.fontSize = '24px';
-titleStyle.style.lineHeight = '1.3';
-titleStyle.style.letterSpacing = '0.04em';
-titleStyle.style.color = '#2e2f42';
-
-
-
-
-
-
-
-
-
+titleStyle.style.fontWeight = "600";
+titleStyle.style.fontSize = "24px";
+titleStyle.style.lineHeight = "1.3";
+titleStyle.style.letterSpacing = "0.04em";
+titleStyle.style.color = "#2e2f42";

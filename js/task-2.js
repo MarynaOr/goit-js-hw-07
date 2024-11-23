@@ -43,11 +43,10 @@ function createMarkup(arr) {
     .join("");
 }
 
+//
 list.style.display = "flex";
 list.style.flexWrap = "wrap";
 list.style.justifyContent = "center";
 list.style.rowGap = "48px";
 list.style.columnGap = "24px";
 list.style.width = "calc((100% -96px) / 3";
-
-
