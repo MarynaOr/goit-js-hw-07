@@ -34,7 +34,7 @@ function createMarkup(arr) {
     .map(
       (item) => `
   <li>
-  <img src='${item.url}' alt='${item.alt}' class='card-img' width='320px'
+  <img src='${item.url}' alt='${item.alt}' class='card-img' width='360px' height='240px'
   >
 
   </li>
@@ -45,4 +45,9 @@ function createMarkup(arr) {
 
 list.style.display = "flex";
 list.style.flexWrap = "wrap";
-list.style.gap = "25px";
+list.style.justifyContent = "center";
+list.style.rowGap = "48px";
+list.style.columnGap = "24px";
+list.style.width = "calc((100% -96px) / 3";
+
+
